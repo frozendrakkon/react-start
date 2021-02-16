@@ -7,14 +7,12 @@ const Profile = (() => {
   return (
     <div className={classes.content}>
       <div>
-        <img src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" />
+        <img src="http://parksadventure.com/wp-content/uploads/2017/10/header-image-1-2.png" />
       </div>
-        <div>
-        ava + descr
-        </div>
         <MyPosts />
     </div>
   )
 })
 
 export default Profile
+

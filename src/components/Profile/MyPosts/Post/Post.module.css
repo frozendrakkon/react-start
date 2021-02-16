@@ -1,4 +1,5 @@
-div img{
+.item img{
   width: 10%;
+  height: 10%;
   border-radius: 50%;
 }

@@ -4,19 +4,19 @@ const Navbar = (() => {
   return (
     <nav className={classes.nav}>
       <div>
-        <a className={classes.abra} href="#">Profile</a>
+        <a className={classes.item} href="#">Profile</a>
       </div>
       <div>
-        <a href="#">Message</a>
+        <a className={classes.item} href="#">Message</a>
       </div>
       <div>
-        <a href="#">News</a>
+        <a className={classes.item} href="#">News</a>
       </div>
       <div>
-        <a href="#">Music</a>
+        <a className={classes.item} href="#">Music</a>
       </div>
       <div>
-        <a href="#">Settings</a>
+        <a className={classes.item} href="#">Settings</a>
       </div>
     </nav>
   )
