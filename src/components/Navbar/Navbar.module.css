@@ -8,10 +8,14 @@ nav div{
 }
 
 .item {
-  color: #ff3747;
+  color: #000000;
   font-size: 18px;
 }
 
 .item:hover{
+  color: #f8a7ae;
+}
+
+.active{
   color: #f8a7ae;
 }
