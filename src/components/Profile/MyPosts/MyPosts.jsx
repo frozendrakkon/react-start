@@ -7,7 +7,7 @@ const MyPosts = (() => {
 
   return (
     <div>
-      My Posts
+      <b>My Posts</b>
       <div>
         <textarea></textarea>
         <div>
