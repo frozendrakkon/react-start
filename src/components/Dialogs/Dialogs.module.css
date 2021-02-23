@@ -1,25 +1,17 @@
-.dialogs{
+.dialogs {
     display: grid;
-    grid-template-columns:  2fr 10fr;
+    grid-template-columns: 2fr 10fr;
 }
 
 .dialogsItems{
-padding: 10px; 
-}
-
-
-
-.dialog{
-
-}
-.active{
     color: #f8a7ae;
 }
-
-.messages{
-
+.dialogsItems a {
+    color: #000000;
 }
-
-.message{
-
+.dialogsItems a:hover {
+    color: #f8a7ae;
+}
+.active {
+    color: #f8a7ae;
 }
