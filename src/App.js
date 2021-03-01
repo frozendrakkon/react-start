@@ -7,17 +7,18 @@ import News from "./components/News/News"
 import classes from "./App.css"
 import { BrowserRouter, Route } from 'react-router-dom';
 
-const App = () => {
+const App = (props) => {
+
   return (
+
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
         <Navbar />
-        {/* <Profile /> */}
         <div class="app-wrapper-content">
-          <Route path="/dialogs" component={Dialogs} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/news" component={News} />
+          <Route path="/dialogs" render={() => <Dialogs messages={props.messages} dialogs={props.dialogs} />} />
+          <Route path="/profile" render={() => <Profile postData={props.postData}/>} />
+          <Route path="/news" render={() => <News />} />
         </div>
       </div>
     </BrowserRouter>

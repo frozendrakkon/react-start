@@ -1,5 +1,4 @@
 import DialogItem from "../DialogItem/DialogItem"
-
 import classes from "../Dialogs.module.css"
 
 const Message = ((props) => {
