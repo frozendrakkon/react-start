@@ -1,4 +1,3 @@
-import './App.css';
 import Profile from './components/Profile/Profile';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
@@ -15,9 +14,15 @@ const App = (props) => {
       <div className="app-wrapper">
         <Header />
         <Navbar />
-        <div class="app-wrapper-content">
-          <Route path="/dialogs" render={() => <Dialogs state={props.state.messagesPage}/>} />
-          <Route path="/profile" render={() => <Profile state={props.state.profilePage}/>} />
+        <div className="app-wrapper-content">
+           
+          <Route path="/dialogs" render={() => <Dialogs
+            state={props.state.messagesPage} />} />
+
+          <Route path="/profile" render={() => <Profile
+            state={props.state.profilePage}
+            addPost={props.addPost} />} />
+            
           <Route path="/news" render={() => <News />} />
         </div>
       </div>

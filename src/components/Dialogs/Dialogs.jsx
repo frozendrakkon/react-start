@@ -12,7 +12,6 @@ const Dialogs = ((props) => {
 
     const addSubmitMessage = (() => {
         let text = SubmitMessage.current.value
-        alert(text)
     })
 
     return (
