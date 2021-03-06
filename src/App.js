@@ -12,8 +12,10 @@ const App = (props) => {
 
     <BrowserRouter>
       <div className="app-wrapper">
+
         <Header />
         <Navbar />
+
         <div className="app-wrapper-content">
            
           <Route path="/dialogs" render={() => <Dialogs
@@ -25,6 +27,7 @@ const App = (props) => {
             updateNewPostText={props.updateNewPostText}
             />} />
           <Route path="/news" render={() => <News />} />
+          
         </div>
       </div>
     </BrowserRouter>
