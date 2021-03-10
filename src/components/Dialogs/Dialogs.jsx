@@ -5,8 +5,7 @@ import React from "react"
 import { SendMessageCreator, updateNewMessageBodyCreator } from "../../redux/state"
 
 const Dialogs = ((props) => {
-
-    let state = props.store.getState().dialogsPage
+    let state = props.store.getState().messagesPage
 
     let dialogsElements = state.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />)
     let messagesElements = state.messages.map(message => <Message messages={message.message} />)
@@ -16,10 +15,11 @@ const Dialogs = ((props) => {
         props.store.dispatch(SendMessageCreator())
     })
 
-     let onNewMessageChange = ((event) => {
+    let onNewMessageChange = ((event) => {
+        //  debugger
         let body = event.target.value
-        store.dispatch(updateNewMessageBodyCreator(body))
-     })
+        props.store.dispatch(updateNewMessageBodyCreator(body))
+    })
 
     return (
         <div>
@@ -30,11 +30,17 @@ const Dialogs = ((props) => {
                 <div className={classes.message}>
                     <div> {messagesElements} </div>
                     <div>
-                        <div><textarea 
-                        onChange={onNewMessageChange}
-                        value={newMessageBody} 
-                        placeholder="Enter your message"></textarea></div>
-                        <div><button onClick={onSendMessageClick}>Send</button></div>
+                        <div>
+                            <textarea
+                                onChange={onNewMessageChange}
+                                value={newMessageBody}
+                                placeholder="Enter your message">
+                            </textarea>
+                        </div>
+                        <div>
+                            <button
+                                onClick={onSendMessageClick}>Send</button>
+                        </div>
                     </div>
                 </div>
             </div>
