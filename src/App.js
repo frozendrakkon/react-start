@@ -7,7 +7,6 @@ import News from "./components/News/News"
 import { BrowserRouter, Route } from 'react-router-dom';
 
 const App = (props) => {
- // ! polo 889 
   return (
 
     <BrowserRouter>

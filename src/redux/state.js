@@ -38,6 +38,7 @@ let store = {
 
 
     getState() {
+        console.log(this._state)
         return this._state;
     },
 
