@@ -1,4 +1,4 @@
-import store from "./redux/redux-store"
+import store from "./redux/state"
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -18,7 +18,6 @@ let rerenderEntireTree = (state) => {
 }
 //  !! ошибка снизу
 rerenderEntireTree(store.getState()); 
-
 
 store.subscribe( () => {
     let state = store.getState()
